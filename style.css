@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* -------- HEADER -------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+#logofurianav {
+    width: 100px;
+    height: 100px;
+}
+
+#furianav {
+    font-size: 40px;
+    margin-left: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.cart {
+    background-color: black;
+    color: white;
+    padding: 20px 15px;
+}
+
+/* -------- HERO SECTION -------- */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#imgfuria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.overlay h1 {
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.overlay span {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* -------- CHATBOT -------- */
+.chatbot {
+    margin: 40px auto;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+.chatbot h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#chat {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.user, .bot {
+    margin: 10px 0;
+}
+
+.user {
+    text-align: right;
+    font-weight: bold;
+}
+
+.bot {
+    display: flex;
+    align-items: center;
+}
+
+.bot-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 120px);
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ec971f;
+}
+
+/* Estilo do botão de comandos */
+#help-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilo do popup (caixa de ajuda) */
+.help-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.help-box .help-content {
+    text-align: center;
+}
+
+.help-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.help-box li {
+    margin: 10px 0;
+}
+
+.help-box button {
+    margin-top: 20px;
+    padding: 8px 15px;
+    background-color: #f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.help-box button:hover {
+    background-color: #c00;
+}
+.chatbot .bot img {
+    width: 50px;  /* Defina o tamanho desejado para a largura da imagem */
+    height: 50px; /* Defina o tamanho desejado para a altura da imagem */
+    border-radius: 50%; /* Torna a imagem redonda */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+/* -------- RESPONSIVIDADE -------- */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .overlay h1 {
+        font-size: 35px;
+    }
+
+    .chatbot iframe,
+    #chatling-inline-bot {
+        height: 300px;
+    }
+
+    .chatbot h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .overlay h1 {
+        font-size: 30px;
+    }
+
+    .chatbot iframe,
+    #chatling-inline-bot {
+        height: 250px;
+    }
+
+    .chatbot h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .overlay h1 {
+        font-size: 24px;
+    }
+
+    .chatbot iframe,
+    #chatling-inline-bot {
+        height: 200px;
+    }
+
+    .chatbot h2 {
+        font-size: 18px;
+    }
+}
